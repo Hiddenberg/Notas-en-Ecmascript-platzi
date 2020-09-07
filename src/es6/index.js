@@ -178,3 +178,58 @@ helloPromise()
    .then(response => console.log(response))
    .then(() => console.log('hola'))
    .catch(error => console.log(error))
+
+
+
+/* ------------------------- clase 4 -Clases, Modulos y Generadores ------------------------- */
+
+/* ++Clases */
+/* En JS podemos trabajar con programacion orientada a objetos de la siguiente forma */
+
+class Calculator {
+   constructor() {
+      this.valueA = 0;
+      this.valueB = 0;
+      
+   }
+
+   sum(valueA, valueB) {
+      this.valueA = valueA;
+      this.valueB = valueB;
+
+      return this.valueA + this.valueB;
+   }
+}
+
+
+const calc = new Calculator;
+
+console.log(calc.sum(2,3));
+
+
+
+/* ++Modulos */
+/* En JS podemos importar diferentes partes de codigo incluso desde otros archivos al hacer un import de la siguiente forma */
+import { hello } from './module.js'
+
+hello(); //esta funcion esta definida en el archivo module.js y no en este mismo
+
+
+
+/* ++Generators */
+/* Estos retornan una serie de valores segun el algoritmo definido */
+
+function* helloWorld () {
+   if (true) {
+      yield 'hello'
+   }
+   if (true) {
+      yield 'world'
+   }
+}
+
+const generatorHello = helloWorld();
+
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
