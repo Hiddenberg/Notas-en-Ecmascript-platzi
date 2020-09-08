@@ -11,7 +11,7 @@ function newFunction(name, age , country) {
 }
 
 
-/* Esta es la nueva forma de hacerlo con ecmascript 6 */
+/* Esta es la nueva forma de hacerlo con ecmascript 6 por defaults*/
 
 function newFunction2(name = 'victor', age = 24, country = 'mx') {
    console.log(name,age,country);
